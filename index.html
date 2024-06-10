@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="no-referrer">
+    <meta name="keywords" content="view BigScreen DataVisual">
+    <meta name="description" content="商品订单大屏可视化">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="refresh" content="0; url=http://www.example.com/">
+    <meta name="copyright" content="Copyright information">
+    <title>商品订单大屏可视化</title>
+    <link rel="icon" href="./static/image/icon.png" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="loading"></div>
+    <div class="header">
+        <!-- 全屏按钮 -->
+        <div class="fullscreen" id="button">
+            <i class="fas fa-expand fullscreen-icon"></i>
+        </div>
+        <!-- 标题 -->
+        <div class="title">商品订单大屏可视化</div>
+        <!-- 展示时间 -->
+        <div class="time" id="showTime"></div>
+    </div>
+    <div id="main" class="container">
+        <ul class="clearfix">
+            <li>
+                <!-- 左边部分 -->
+                <div class="left">
+                    <div id="barChartContainer" class="box box-1"></div>
+                    <div id="stackBarChart" class="box box-2"></div>
+                    <div id="lineChartContainer" class="box box-3"></div>
+                </div>
+            </li>
+            <li>
+                <!-- 中间部分 -->
+                <div class="center">
+                    <div class="bar">
+                        <div class="barbox">
+                            <ul class="clearfix">
+                                <li id="sale" class="box-top item"></li>
+                                <li id="profit" class="box-top item"></li>
+                            </ul>
+                        </div>
+                        <div class="barbox2">
+                            <ul class="clearfix">
+                                <li class="box-bottom item">总销售额</li>
+                                <li class="box-bottom item">总利润额</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bar info">
+                        <div class="describe">
+                            <span class="desc">最佳销售经理</span>
+                            <span class="name" id="name"></span>
+                        </div>
+                        <div class="barbox">
+                            <ul class="clearfix">
+                                <li id="like" class="box-top"></li>
+                                <li id="rate" class="box-top"></li>
+                            </ul>
+                        </div>
+                        <div class="barbox2">
+                            <ul class="clearfix">
+                                <li class="box-bottom">销售额</li>
+                                <li class="box-bottom">利润额</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <div class="map1"><img src="./static/image/lbx.png"></div>
+                        <div class="map2"><img src="./static/image/jt.png"></div>
+                        <div class="map3"><img src="./static/image/map.png"></div>
+                    </div>
+                    <div id="map" class="geo"></div>
+                </div>
+            </li>
+            <li>
+                <!-- 右边部分    -->
+                <div class="right">
+                    <div id="bar" class="customer"></div>
+                    <div id="pie1" class="customer piecharts"></div>
+                    <div id="pie2" class="customer piecharts"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 主要绘图 -->
+    <script type="text/javascript" src="./static/js/main.js"></script>
+    <!-- 加载特效 -->
+    <script type="text/javascript" src="./static/js/loading.js"></script>
+    <script type="text/javascript" src="./static/js/numberAnimation.js"></script>
+    <!-- 展示页面上的时间 -->
+    <script type="text/javascript" src="./static/js/showTime.js"></script>
+    <!-- 鼠标点击效果 -->
+    <script type="text/javascript" src="./static/js/showHeart.js"></script>
+    <!-- 地图绘制 -->
+    <script type="text/javascript" src="./static/js/area_echarts.js"></script>
+    <!-- 全屏 -->
+    <script type="text/javascript" src="./static/js/fullScreen.js"></script>
+    <!-- 雪花效果 -->
+    <script type="text/javascript" src="./static/js/snow.js"></script>
+</body>
+
+</html>

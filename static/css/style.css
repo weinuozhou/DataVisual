@@ -1,0 +1,428 @@
+/*滚动条样式*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    position: absolute
+}
+
+::-webkit-scrollbar-thumb {
+    /* 设置滚动条的颜色 */
+    background-color: #5bc0de
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /* 设置全局字体 */
+    font-family: sans-serif;
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    /* 设置背景图片 */
+    background: #000d4a url("../image/bg.png") center top;
+    color: #666;
+    font-size: 16px;
+}
+
+ul {
+    /* 去除列表样式 */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* 设置盒子模型为弹性盒子 */
+    display: flex;
+    /* 子元素均匀分布在容器内 */
+    justify-content: space-between;
+}
+
+li {
+    /* 设置弹性盒在容器的可伸缩性 */
+    /* 等比例，每个li元素相同宽度 */
+    flex: 1;
+}
+
+.header {
+    /* 设置宽度和高度 */
+    /* 宽度为父容器的100% */
+    /* 高度为50个像素 */
+    width: 100%;
+    /* height: 30px; */
+    /* 设置弹性盒子，交叉轴对齐，子元素均匀分布 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 上、右、下、左内边距均为5个像素 */
+    padding: 5px;
+    position: relative;
+    /* 上外边距为15个像素 */
+    margin-top: 15px;
+    /* 设置背景图片，只在一个方向平铺，水平、垂直居中 */
+    background: url("../image/head.png") no-repeat center center;
+    /* 背景图片在容器内完整覆盖，同时保持图片的比例，且居中显示在容器中 */
+    background-size: cover;
+    background-position: center;
+}
+
+.fullscreen {
+    display: flex;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.fullscreen:hover {
+    background-color: #323b63;
+}
+
+.fullscreen-icon {
+    font-size: 24px;
+    color: #0b80e7
+}
+
+.title {
+    /* 设置字体大小 */
+    font-size: 40px;
+    /* 绝对定位 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    /* 设置字体颜色 */
+    color: rgb(11, 128, 231);
+    font-weight: 700;
+    animation: breath_light 3s ease infinite;
+}
+
+@keyframes breath_light {
+    0% {
+        filter: brightness(100%);
+    }
+
+    50% {
+        filter: brightness(220%);
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+.time {
+    color: #8e93a8;
+    margin-left: auto;
+    position: absolute;
+    right: 5%;
+    text-align: right;
+    color: rgb(11, 128, 131);
+    animation: breath_light 3s ease infinite;
+}
+
+
+.container {
+    /* 设置弹性盒 */
+    /* 子元素垂直排列 */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    /* 方便设置固定宽度和高度，保证图形的质量 */
+    box-sizing: border-box;
+}
+
+.left,
+.center,
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    /* 设置边框 */
+    border: 1px solid rgba(25, 186, 139, .17);
+    padding: 0;
+    background: rgba(255, 255, 255, .04) url(../image/line.png);
+    background-size: 100% auto;
+    position: relative;
+    margin: 0 0 5px;
+    /* 设置堆叠顺序 */
+    z-index: 10;
+    width: 450px;
+    height: 260px;
+}
+
+.box::before,
+.box::after {
+    /* 设置伪元素的布局 */
+    display: table;
+    position: absolute;
+    width: 27px;
+    height: 9px;
+    content: "";
+}
+
+.box::before {
+    /* 设置左上边框 */
+    border-left: 2px solid #02a6b5;
+    left: 0;
+    top: 0;
+    border-top: 2px solid #02a6b5;
+
+}
+
+.box::after {
+    /* 设置右下边框 */
+    border-right: 2px solid #02a6b5;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid #02a6b5;
+}
+
+.bar {
+    background: rgba(101, 132, 226, .1);
+    padding: 15px;
+    margin: 0 0 5px;
+    max-width: 100%;
+    width: 520px;
+}
+
+.barbox {
+    border: 1px solid rgba(25, 186, 139, .17);
+    position: relative;
+    margin: 0;
+}
+
+.barbox2 {
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.item {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+}
+
+.barbox:before,
+.barbox:after {
+    display: table;
+    position: absolute;
+    width: 27px;
+    height: 9px;
+    content: "";
+}
+
+.barbox:before {
+    border-left: 2px solid #02a6b5;
+    border-top: 2px solid #02a6b5;
+}
+
+
+.barbox:after {
+    border-right: 2px solid #02a6b5;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid #02a6b5;
+}
+
+.barbox li:first-child:before {
+    position: absolute;
+    content: "";
+    height: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, .2);
+    right: 0;
+    top: 25%;
+}
+
+.barbox ul,
+.barbox2 ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.box-top {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    color: #ffeb7b;
+    font-size: 50px;
+    padding: 10px;
+    font-weight: 700;
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+.box-bottom {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    color: rgba(255, 255, 255, .7);
+    font-size: 18px;
+    padding: 5px;
+    align-items: center;
+}
+
+.describe {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 0;
+    text-align: center;
+    align-items: center;
+    background: rgba(255, 255, 255, .04) url(../image/line.png);
+}
+
+.desc {
+    width: 50%;
+    font-weight: 400;
+    color: #b3b8d0;
+    padding: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.name {
+    width: 50%;
+    font-size: 18px;
+    color: #0b80e7;
+    animation: breath_light 3s ease infinite;
+}
+
+.map {
+    display: flex;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 0;
+}
+
+.map div {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 设置透明度 */
+    opacity: .5;
+}
+
+.map1 {
+    position: absolute;
+    width: 500px;
+    z-index: 2;
+    opacity: .5;
+    /* 设置动画 */
+    animation: rotateClockwise 15s infinite linear;
+}
+
+.map2 {
+    position: absolute;
+    width: auto;
+    z-index: 3;
+    opacity: 0.2;
+    animation: rotateCounterClockwise 10s infinite linear;
+}
+
+.map3 {
+    position: absolute;
+    width: 500px;
+    z-index: 1;
+}
+
+.map1 img,
+.map2 img,
+.map3 img {
+    border: none;
+    max-width: 100%;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+@keyframes rotateClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotateCounterClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-359deg);
+    }
+}
+
+.geo {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    position: relative;
+    margin: -550px 0 0 0;
+    z-index: 10;
+}
+
+.customer {
+    display: flex;
+    border: 1px solid rgba(25, 186, 139, .17);
+    padding: 0;
+    background: rgba(255, 255, 255, .04) url(../image/line.png);
+    background-size: 100% auto;
+    position: relative;
+    margin: 0 0 5px;
+    z-index: 10;
+    width: 450px;
+    height: 260px;
+}
+
+.customer::before,
+.customer::after {
+    display: table;
+    position: absolute;
+    width: 27px;
+    height: 9px;
+    content: "";
+}
+
+.customer::before {
+    border-left: 2px solid #02a6b5;
+    left: 0;
+    top: 0;
+    border-top: 2px solid #02a6b5;
+
+}
+
+.customer::after {
+    border-right: 2px solid #02a6b5;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid #02a6b5;
+}
