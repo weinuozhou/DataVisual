@@ -907,7 +907,7 @@ var option = {
             feature: {
                 saveAsImage: {},
                 restore: {},
-                dataView: { readOnly: false }
+                dataView: { readOnly: false },
             },
             top: "12%",
             right: "15%"
