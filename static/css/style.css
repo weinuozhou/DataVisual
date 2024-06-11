@@ -88,6 +88,38 @@ li {
     color: #0b80e7
 }
 
+.dropbtn {
+    position: absolute;
+    left: 10%;
+    top: 5px;
+}
+
+.dropbtn-content {
+    display: none;
+    position: absolute;
+    background-color: #c2f8bd;
+    left: 15%;
+    top: 0;
+    box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropbtn-content li {
+    color: #666666;
+    padding: 2px 10px 0;
+    text-decoration: none;
+    display: block;
+}
+
+.dropbtn-content li:hover {
+    background-color: #c2f8bd;
+}
+
+.dropbtn:hover+.dropbtn-content,
+.dropbtn-content:hover {
+    display: block;
+}
+
 .title {
     /* 设置字体大小 */
     font-size: 40px;
@@ -195,6 +227,7 @@ li {
     margin: 0 0 5px;
     max-width: 100%;
     width: 520px;
+    z-index: 2;
 }
 
 .barbox {
@@ -307,6 +340,17 @@ li {
     font-size: 18px;
     color: #0b80e7;
     animation: breath_light 3s ease infinite;
+}
+
+.firework {
+    display: flexbox;
+    position: absolute;
+    z-index: 1;
+}
+
+#canvas {
+    width: 550px;
+    height: 318.4px;
 }
 
 .map {
