@@ -1,7 +1,7 @@
 /*滚动条样式*/
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 0.3125rem;
+    height: 0.3125rem;
     position: absolute
 }
 
@@ -12,6 +12,10 @@
 
 ::-webkit-scrollbar-track {
     background-color: #ddd
+}
+
+:root {
+    font-size: 16px;
 }
 
 * {
@@ -30,7 +34,7 @@ body {
     /* 设置背景图片 */
     background: #000d4a url("../image/bg.png") center top;
     color: #666;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 ul {
@@ -61,10 +65,10 @@ li {
     align-items: center;
     justify-content: space-between;
     /* 上、右、下、左内边距均为5个像素 */
-    padding: 5px;
+    padding: 0.3125rem;
     position: relative;
     /* 上外边距为15个像素 */
-    margin-top: 15px;
+    margin-top: 0.9375rem;
     /* 设置背景图片，只在一个方向平铺，水平、垂直居中 */
     background: url("../image/head.png") no-repeat center center;
     /* 背景图片在容器内完整覆盖，同时保持图片的比例，且居中显示在容器中 */
@@ -75,8 +79,8 @@ li {
 .fullscreen {
     display: flex;
     cursor: pointer;
-    padding: 2px;
-    border-radius: 5px;
+    padding: 0.125rem;
+    border-radius: 0.3125rem;
 }
 
 .fullscreen:hover {
@@ -84,14 +88,14 @@ li {
 }
 
 .fullscreen-icon {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #0b80e7
 }
 
 .dropbtn {
     position: absolute;
     left: 10%;
-    top: 5px;
+    top: 0.3125rem;
 }
 
 .dropbtn-content {
@@ -100,13 +104,13 @@ li {
     background-color: #c2f8bd;
     left: 15%;
     top: 0;
-    box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0.625rem .5rem 1rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .dropbtn-content li {
     color: #666666;
-    padding: 2px 10px 0;
+    padding: 0.125rem 0.625rem 0;
     text-decoration: none;
     display: block;
 }
@@ -122,7 +126,7 @@ li {
 
 .title {
     /* 设置字体大小 */
-    font-size: 40px;
+    font-size: 2.5rem;
     /* 绝对定位 */
     position: absolute;
     left: 50%;
@@ -166,7 +170,7 @@ li {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 0.625rem;
     /* 方便设置固定宽度和高度，保证图形的质量 */
     box-sizing: border-box;
 }
@@ -182,16 +186,16 @@ li {
 .box {
     display: flex;
     /* 设置边框 */
-    border: 1px solid rgba(25, 186, 139, .17);
+    border: 0.0625rem solid rgba(25, 186, 139, .17);
     padding: 0;
     background: rgba(255, 255, 255, .04) url(../image/line.png);
     background-size: 100% auto;
     position: relative;
-    margin: 0 0 5px;
+    margin: 0 0 0.3125rem;
     /* 设置堆叠顺序 */
     z-index: 10;
-    width: 450px;
-    height: 260px;
+    width: 28.125rem;
+    height: 16.25rem;
 }
 
 .box::before,
@@ -199,39 +203,39 @@ li {
     /* 设置伪元素的布局 */
     display: table;
     position: absolute;
-    width: 27px;
-    height: 9px;
+    width: 1.6875rem;
+    height: 0.5625rem;
     content: "";
 }
 
 .box::before {
     /* 设置左上边框 */
-    border-left: 2px solid #02a6b5;
+    border-left: 0.125rem solid #02a6b5;
     left: 0;
     top: 0;
-    border-top: 2px solid #02a6b5;
+    border-top: 0.125rem solid #02a6b5;
 
 }
 
 .box::after {
     /* 设置右下边框 */
-    border-right: 2px solid #02a6b5;
+    border-right: 0.125rem solid #02a6b5;
     right: 0;
     bottom: 0;
-    border-bottom: 2px solid #02a6b5;
+    border-bottom: 0.125rem solid #02a6b5;
 }
 
 .bar {
     background: rgba(101, 132, 226, .1);
-    padding: 15px;
-    margin: 0 0 5px;
+    padding: .9375rem;
+    margin: 0 0 .3125rem;
     max-width: 100%;
-    width: 520px;
+    width: 32.5rem;
     z-index: 2;
 }
 
 .barbox {
-    border: 1px solid rgba(25, 186, 139, .17);
+    border: .0625rem solid rgba(25, 186, 139, .17);
     position: relative;
     margin: 0;
 }
@@ -260,29 +264,29 @@ li {
 .barbox:after {
     display: table;
     position: absolute;
-    width: 27px;
-    height: 9px;
+    width: 1.6875rem;
+    height: 0.5625rem;
     content: "";
 }
 
 .barbox:before {
-    border-left: 2px solid #02a6b5;
-    border-top: 2px solid #02a6b5;
+    border-left: .125rem solid #02a6b5;
+    border-top: .125rem solid #02a6b5;
 }
 
 
 .barbox:after {
-    border-right: 2px solid #02a6b5;
+    border-right: .125rem solid #02a6b5;
     right: 0;
     bottom: 0;
-    border-bottom: 2px solid #02a6b5;
+    border-bottom: .125rem solid #02a6b5;
 }
 
 .barbox li:first-child:before {
     position: absolute;
     content: "";
     height: 50%;
-    width: 1px;
+    width: .0625rem;
     background: rgba(255, 255, 255, .2);
     right: 0;
     top: 25%;
@@ -301,8 +305,8 @@ li {
     width: 50%;
     text-align: center;
     color: #ffeb7b;
-    font-size: 50px;
-    padding: 10px;
+    font-size: 3.125rem;
+    padding: .625rem;
     font-weight: 700;
     font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
@@ -312,15 +316,15 @@ li {
     width: 50%;
     text-align: center;
     color: rgba(255, 255, 255, .7);
-    font-size: 18px;
-    padding: 5px;
+    font-size: 1.125rem;
+    padding: .3125rem;
     align-items: center;
 }
 
 .describe {
     display: flex;
     flex-direction: row;
-    margin: 2px 0;
+    margin: .125rem 0;
     text-align: center;
     align-items: center;
     background: rgba(255, 255, 255, .04) url(../image/line.png);
@@ -331,13 +335,13 @@ li {
     font-weight: 400;
     color: #b3b8d0;
     padding: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
 }
 
 .name {
     width: 50%;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #0b80e7;
     animation: breath_light 3s ease infinite;
 }
@@ -349,15 +353,15 @@ li {
 }
 
 #canvas {
-    width: 550px;
-    height: 318.4px;
+    width: 34.375rem;
+    height: 19.9rem;
 }
 
 .map {
     display: flex;
     position: relative;
-    height: 500px;
-    width: 500px;
+    height: 31.25rem;
+    width: 31.25rem;
     margin: 0;
 }
 
@@ -375,7 +379,7 @@ li {
 
 .map1 {
     position: absolute;
-    width: 500px;
+    width: 31.25rem;
     z-index: 2;
     opacity: .5;
     /* 设置动画 */
@@ -392,7 +396,7 @@ li {
 
 .map3 {
     position: absolute;
-    width: 500px;
+    width: 31.25rem;
     z-index: 1;
 }
 
@@ -426,47 +430,47 @@ li {
 }
 
 .geo {
-    width: 600px;
-    height: 600px;
+    width: 37.5rem;
+    height: 37.5rem;
     display: flex;
     position: relative;
-    margin: -550px 0 0 0;
+    margin: -34.375rem 0 0 0;
     z-index: 10;
 }
 
 .customer {
     display: flex;
-    border: 1px solid rgba(25, 186, 139, .17);
+    border: .0625rem solid rgba(25, 186, 139, .17);
     padding: 0;
     background: rgba(255, 255, 255, .04) url(../image/line.png);
     background-size: 100% auto;
     position: relative;
-    margin: 0 0 5px;
+    margin: 0 0 .3125rem;
     z-index: 10;
-    width: 450px;
-    height: 260px;
+    width: 28.125rem;
+    height: 16.25rem;
 }
 
 .customer::before,
 .customer::after {
     display: table;
     position: absolute;
-    width: 27px;
-    height: 9px;
+    width: 1.6875rem;
+    height: .5625rem;
     content: "";
 }
 
 .customer::before {
-    border-left: 2px solid #02a6b5;
+    border-left: .125rem solid #02a6b5;
     left: 0;
     top: 0;
-    border-top: 2px solid #02a6b5;
+    border-top: .125rem solid #02a6b5;
 
 }
 
 .customer::after {
-    border-right: 2px solid #02a6b5;
+    border-right: .125rem solid #02a6b5;
     right: 0;
     bottom: 0;
-    border-bottom: 2px solid #02a6b5;
+    border-bottom: .125rem solid #02a6b5;
 }
