@@ -35,7 +35,7 @@
 
 ## 处理数据
 
-详情请见[process.ipynb](./process.ipynb)
+数据较为简单, 数据处理部分不展示，可直接查看处理过的数据:[data.json](./data/data.json)
 
 ## 数据可视化
 
@@ -52,3 +52,5 @@
 7. [渐变色推荐](https://uigradients.com/#Dull)
 8. [大屏可视化有用的CSS技巧](https://juejin.cn/post/7047012645416730654)
 9. [前端开发者文档](https://developer.mozilla.org/zh-CN/)
+10. [JavaScript实现烟花效果](https://xie.infoq.cn/article/1928c13a01353e62fcee005b3)
+11. [颜色值转换器](https://sunpma.com/other/rgb/)
