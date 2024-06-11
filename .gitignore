@@ -4,3 +4,6 @@
 *.bak
 *.env
 *.ipynb
+*.docx
+*.doc
+*.pdf
