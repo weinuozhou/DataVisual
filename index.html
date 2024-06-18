@@ -11,7 +11,7 @@
     <meta name="description" content="商品订单大屏可视化">
     <meta name="author" content="zhouweinuo">
     <!-- 自动刷新 -->
-    <meta http-equiv="refresh" content="120">
+    <meta http-equiv="refresh" content="86400">
     <!-- 自动重定向 -->
     <meta http-equiv="refresh" content="86400; url=https://github.com/weinuozhou/DataVisual/">
     <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate">
@@ -23,15 +23,19 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script> -->
 </head>
 
 <body>
+    <!-- 定义加载事件 -->
     <div id="loading"></div>
+    <!-- 定义头部标签 -->
     <div class="header">
         <!-- 全屏按钮 -->
         <div class="fullscreen" id="button">
             <i class="fas fa-expand fullscreen-icon"></i>
         </div>
+        <!-- 单位说明组件 -->
         <div class="dropbtn">单位说明</div>
         <ul class="dropbtn-content">
             <li>1M=1000000</li>
@@ -42,6 +46,7 @@
         <!-- 展示时间 -->
         <div class="time" id="showTime"></div>
     </div>
+    <!-- 定义主要绘图区域 -->
     <div id="main" class="container">
         <ul class="clearfix">
             <li>
@@ -108,6 +113,7 @@
             </li>
         </ul>
     </div>
+    <!--  -->
     <!-- 主要绘图 -->
     <script type="text/javascript" src="./static/js/main.js"></script>
     <!-- 加载特效 -->
